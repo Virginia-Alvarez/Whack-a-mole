@@ -1,0 +1,366 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: Clip;
+  src: url("https://acupoftee.github.io/fonts/Clip.ttf"); }
+
+body {
+  background-color: #141114;
+  background-image: linear-gradient(335deg, black 23px, transparent 23px), linear-gradient(155deg, black 23px, transparent 23px), linear-gradient(335deg, black 23px, transparent 23px), linear-gradient(155deg, black 23px, transparent 23px);
+  background-size: 58px 58px;
+  background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px; }
+
+.sign {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  height: 50%;
+  background-image: radial-gradient(ellipse 50% 35% at 50% 50%, #6c8F32, transparent);
+  transform: translate(-50%, -50%);
+  letter-spacing: 2;
+  left: 50%;
+  top: 50%;
+  font-family: "Clip";
+  text-transform: uppercase;
+  font-size: 6em;
+  color: #ffe6ff;
+  text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #558303, -0.2rem 0.1rem 1rem #558303, 0.2rem 0.1rem 1rem #558303, 0 -0.5rem 2rem #f2e880, 0 0.5rem 3rem #f2e880;
+  -webkit-animation: shine 2s forwards, flicker 3s infinite;
+  animation: shine 2s forwards, flicker 3s infinite; }
+
+@-webkit-keyframes blink {
+  0%,
+  22%,
+  36%,
+  75% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #558303, -0.2rem 0.1rem 1rem #558303, 0.2rem 0.1rem 1rem #558303, 0 -0.5rem 2rem #f2e880, 0 0.5rem 3rem #f2e880; }
+  28%,
+  33% {
+    color: #f2e880;
+    text-shadow: none; }
+  82%,
+  97% {
+    color: #f2e880;
+    text-shadow: none; } }
+
+@keyframes blink {
+  0%,
+  22%,
+  36%,
+  75% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #558303, -0.2rem 0.1rem 1rem #558303, 0.2rem 0.1rem 1rem #558303, 0 -0.5rem 2rem #f2e880, 0 0.5rem 3rem #f2e880; }
+  28%,
+  33% {
+    color: #f2e880;
+    text-shadow: none; }
+  82%,
+  97% {
+    color: #f2e880;
+    text-shadow: none; } }
+
+.flicker {
+  -webkit-animation: shine 2s forwards, blink 3s 2s infinite;
+  animation: shine 2s forwards, blink 3s 2s infinite; }
+
+.fast-flicker {
+  -webkit-animation: shine 2s forwards, blink 10s 1s infinite;
+  animation: shine 2s forwards, blink 10s 1s infinite; }
+
+@-webkit-keyframes shine {
+  0% {
+    color: #356211;
+    text-shadow: none; }
+  100% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #558303, -0.2rem 0.1rem 1rem #558303, 0.2rem 0.1rem 1rem #558303, 0 -0.5rem 2rem #f2e880, 0 0.5rem 3rem #f2e880; } }
+
+@keyframes shine {
+  0% {
+    color: #356211;
+    text-shadow: none; }
+  100% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #558303, -0.2rem 0.1rem 1rem #558303, 0.2rem 0.1rem 1rem #558303, 0 -0.5rem 2rem #f2e880, 0 0.5rem 3rem #f2e880; } }
+
+@-webkit-keyframes flicker {
+  from {
+    opacity: 1; }
+  4% {
+    opacity: 0.9; }
+  6% {
+    opacity: 0.85; }
+  8% {
+    opacity: 0.95; }
+  10% {
+    opacity: 0.9; }
+  11% {
+    opacity: 0.922; }
+  12% {
+    opacity: 0.9; }
+  14% {
+    opacity: 0.95; }
+  16% {
+    opacity: 0.98; }
+  17% {
+    opacity: 0.9; }
+  19% {
+    opacity: 0.93; }
+  20% {
+    opacity: 0.99; }
+  24% {
+    opacity: 1; }
+  26% {
+    opacity: 0.94; }
+  28% {
+    opacity: 0.98; }
+  37% {
+    opacity: 0.93; }
+  38% {
+    opacity: 0.5; }
+  39% {
+    opacity: 0.96; }
+  42% {
+    opacity: 1; }
+  44% {
+    opacity: 0.97; }
+  46% {
+    opacity: 0.94; }
+  56% {
+    opacity: 0.9; }
+  58% {
+    opacity: 0.9; }
+  60% {
+    opacity: 0.99; }
+  68% {
+    opacity: 1; }
+  70% {
+    opacity: 0.9; }
+  72% {
+    opacity: 0.95; }
+  93% {
+    opacity: 0.93; }
+  95% {
+    opacity: 0.95; }
+  97% {
+    opacity: 0.93; }
+  to {
+    opacity: 1; } }
+
+@keyframes flicker {
+  from {
+    opacity: 1; }
+  4% {
+    opacity: 0.9; }
+  6% {
+    opacity: 0.85; }
+  8% {
+    opacity: 0.95; }
+  10% {
+    opacity: 0.9; }
+  11% {
+    opacity: 0.922; }
+  12% {
+    opacity: 0.9; }
+  14% {
+    opacity: 0.95; }
+  16% {
+    opacity: 0.98; }
+  17% {
+    opacity: 0.9; }
+  19% {
+    opacity: 0.93; }
+  20% {
+    opacity: 0.99; }
+  24% {
+    opacity: 1; }
+  26% {
+    opacity: 0.94; }
+  28% {
+    opacity: 0.98; }
+  37% {
+    opacity: 0.93; }
+  38% {
+    opacity: 0.5; }
+  39% {
+    opacity: 0.96; }
+  42% {
+    opacity: 1; }
+  44% {
+    opacity: 0.97; }
+  46% {
+    opacity: 0.94; }
+  56% {
+    opacity: 0.9; }
+  58% {
+    opacity: 0.9; }
+  60% {
+    opacity: 0.99; }
+  68% {
+    opacity: 1; }
+  70% {
+    opacity: 0.9; }
+  72% {
+    opacity: 0.95; }
+  93% {
+    opacity: 0.93; }
+  95% {
+    opacity: 0.95; }
+  97% {
+    opacity: 0.93; }
+  to {
+    opacity: 1; } }
+
+.main {
+  background-image: url("../images/sprinkles.png");
+  background-repeat: repeat;
+  background-size: contain;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+
+.big-title {
+  color: #6c8F32;
+  font-family: "Roboto Slab", serif;
+  font-size: 2.5rem;
+  text-align: center; }
+  @media all and (min-width: 768px) {
+    .big-title {
+      font-size: 3.75rem; } }
+
+.section-score {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #8f326b;
+  font-weight: 800;
+  justify-content: space-between;
+  gap: 1.25rem;
+  font-size: 1.3125rem;
+  background-color: #f2e880;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px; }
+  @media all and (min-width: 768px) {
+    .section-score {
+      font-size: 2.5rem; } }
+
+.section-play {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  row-gap: 2.5rem; }
+  @media all and (min-width: 768px) {
+    .section-play {
+      justify-content: space-evenly;
+      gap: 3.75rem;
+      width: 60%; } }
+  @media all and (min-width: 1024px) {
+    .section-play {
+      justify-content: space-around;
+      gap: 9.375rem;
+      row-gap: 40px; } }
+
+.bowl {
+  overflow: hidden;
+  position: relative;
+  width: 6.25rem;
+  height: 5.625rem; }
+
+.bowl::after {
+  display: block;
+  background-image: url("../images/bowl.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: '';
+  width: 5.625rem;
+  height: 5.625rem;
+  position: absolute;
+  z-index: 2;
+  bottom: -10px; }
+
+.avocado {
+  background-image: url("../images/cool-avocado.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 5.625rem;
+  height: 4.375rem;
+  display: block;
+  transition: all 0.4s ease; }
+
+.btn {
+  width: 4.375rem;
+  height: 1.875rem;
+  background-color: #c15c37;
+  color: white;
+  border-radius: 0.9375rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; }
+  @media all and (min-width: 768px) {
+    .btn {
+      width: 7.5rem;
+      height: 3.125rem;
+      font-size: 1.25rem; } }
+
+.sms {
+  color: #8f326b;
+  font-weight: 400;
+  font-size: 1.3125rem;
+  background-color: #f2e880;
+  width: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px; }
+  @media all and (min-width: 768px) {
+    .sms {
+      font-size: 1.875rem; } }
+
+/*# sourceMappingURL=main.css.map */

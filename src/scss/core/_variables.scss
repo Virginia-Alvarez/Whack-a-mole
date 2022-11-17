@@ -1,0 +1,19 @@
+// // fonts
+$font-montserrat: 'Montserrat', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
+$font-roboto-slab: 'Roboto Slab', serif;
+
+// // colors
+$color-dark-green: #356211;
+$color-very-green: #558303;
+$color-green: #6c8F32;
+$color-yellow: #f2e880;
+$color-brown: #c15c37;
+$color-title: #8f326b;
+$color-white: white;
+
+// función medidas rem
+$defaultFontSize: 16;
+@function rem($pixels) {
+  @return ($pixels / $defaultFontSize * 1rem);
+}
