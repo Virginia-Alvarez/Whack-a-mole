@@ -124,7 +124,7 @@ table {
   width: 5.625rem;
   height: 5.625rem;
   position: absolute;
-  z-index: 2;
+  z-index: -20;
   bottom: -10px; }
 
 .avocado {
