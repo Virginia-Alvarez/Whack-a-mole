@@ -30,6 +30,13 @@
         
     
 }
+
+.article-board {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
 .section-score{
     display: flex;
     flex-direction: row;
@@ -50,34 +57,41 @@
         font-size: rem(40); 
     };
 }
+
 .section-play{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    gap:rem(20);
-    row-gap: rem(40);
-    @media all and (min-width: 768px){
-        justify-content: space-evenly;
-        gap:rem(60);
-        width: 60%;
-       
-    };
-    @media all and (min-width: 1024px){
-        justify-content: space-around;
-        gap:rem(150);
-        row-gap: 40px;
-        
-       
-    };
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: rem(100);
+    @media all and (min-width:320px){
+        gap: rem(2);
+    }
+    // flex-direction: row;
+    // justify-content: space-evenly;
+    // align-items: center;
+    // flex-wrap: wrap;
+    // gap:rem(2);
+    // row-gap: rem(40);
+    // width: 60%;
+    // @media all and (min-width: 768px){
+    //     justify-content: space-evenly;
+    //     gap:rem(60);
+    //     width: 60%;
+    // };
+    // @media all and (min-width: 1024px){
+    //     justify-content: space-around;
+    //     gap:rem(150);
+    //     row-gap: 40px;
+    // };
 }
    
 .bowl{   
     overflow: hidden;
     position: relative;
-    width: rem(100);
-    height: rem(90);
+    width: rem(120);
+    height: rem(150);
+    // @media all and (min-width:320px){
+    //    width: rem(70);
+    // }
 }
 
 .bowl::after{
@@ -86,21 +100,25 @@
     background-repeat: no-repeat;
     background-size:contain;
     content: '';
-    width: rem(90);
-    height: rem(90);
+    width: rem(110);
+    height: rem(110);
     position: absolute;
-    z-index: -20;
+    z-index: 2000;
     bottom: -10px;
 }
 
 .avocado{
     background-image: url('../images/cool-avocado.png');
     background-repeat: no-repeat;
-    background-size:cover;
-    width: rem(90);
-    height: rem(70);
+    background-size:contain;
+    width: rem(110);
+    height: rem(80);
     display: block;
     transition:all 0.4s ease;
+    position: relative;
+    z-index: 1000;
+    top: 48px;
+    transform: translate(15px);
 }
 .btn{
     width: rem(70);
@@ -120,7 +138,7 @@
 .sms{
     color: $color-title;
     font-weight: 400;   
-    font-size: rem(21);
+    font-size: rem(16);
     background-color: #FBAB7E;
     background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
     width: auto;

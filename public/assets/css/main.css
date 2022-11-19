@@ -70,6 +70,11 @@ table {
       height: 6.25rem;
       width: 100%; } }
 
+.article-board {
+  display: flex;
+  flex-direction: row;
+  gap: 40px; }
+
 .section-score {
   display: flex;
   flex-direction: row;
@@ -91,29 +96,18 @@ table {
       font-size: 2.5rem; } }
 
 .section-play {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-  row-gap: 2.5rem; }
-  @media all and (min-width: 768px) {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6.25rem; }
+  @media all and (min-width: 320px) {
     .section-play {
-      justify-content: space-evenly;
-      gap: 3.75rem;
-      width: 60%; } }
-  @media all and (min-width: 1024px) {
-    .section-play {
-      justify-content: space-around;
-      gap: 9.375rem;
-      row-gap: 40px; } }
+      gap: 0.125rem; } }
 
 .bowl {
   overflow: hidden;
   position: relative;
-  width: 6.25rem;
-  height: 5.625rem; }
+  width: 7.5rem;
+  height: 9.375rem; }
 
 .bowl::after {
   display: block;
@@ -121,20 +115,24 @@ table {
   background-repeat: no-repeat;
   background-size: contain;
   content: '';
-  width: 5.625rem;
-  height: 5.625rem;
+  width: 6.875rem;
+  height: 6.875rem;
   position: absolute;
-  z-index: -20;
+  z-index: 2000;
   bottom: -10px; }
 
 .avocado {
   background-image: url("../images/cool-avocado.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 5.625rem;
-  height: 4.375rem;
+  background-size: contain;
+  width: 6.875rem;
+  height: 5rem;
   display: block;
-  transition: all 0.4s ease; }
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1000;
+  top: 48px;
+  transform: translate(15px); }
 
 .btn {
   width: 4.375rem;
@@ -154,7 +152,7 @@ table {
 .sms {
   color: #8f326b;
   font-weight: 400;
-  font-size: 1.3125rem;
+  font-size: 1rem;
   background-color: #FBAB7E;
   background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
   width: auto;
